@@ -78,6 +78,15 @@ function updateMissionScreen() {
 
   document.getElementById("progressFill").style.width =
     `${(completedCount / 3) * 100}%`;
+
+  const allComplete = completedCount === 3;
+  document.body.classList.toggle("campaign-complete", allComplete);
+  document.getElementById("debriefUnlock").hidden = !allComplete;
+  document.getElementById("missionHeading").innerHTML = allComplete
+    ? 'CAMPAIGN <span>COMPLETE</span>' : 'MISSION <span>SELECT</span>';
+  document.getElementById("missionSubtitle").textContent = allComplete
+    ? 'CONGRATULATIONS, AGENT SIMPSON. ALL THREE MISSIONS COMPLETE. YOUR FINAL DEBRIEF IS READY.'
+    : 'AGENT SIMPSON, YOUR FINAL ASSIGNMENTS AWAIT. COMPLETE ALL MISSIONS TO UNLOCK YOUR REWARD.';
 }
 
 document.querySelectorAll(".mission-button").forEach(button => {
