@@ -1,0 +1,219 @@
+
+/* =========================================
+   GLOBAL STYLES
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: radial-gradient(
+    circle at top,
+    #183c63,
+    #071322 75%
+  );
+
+  color: #f4f7ff;
+  font-family: system-ui, sans-serif;
+  text-align: center;
+}
+
+
+/* =========================================
+   PAGE LAYOUT
+========================================= */
+
+.shell {
+  max-width: 560px;
+  margin: auto;
+  padding: 10px 14px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.eyebrow {
+  color: #e8c86d;
+  letter-spacing: 0.2em;
+  font-size: 10px;
+  margin: 4px;
+}
+
+h1 {
+  margin: 2px 0 5px;
+  font-size: clamp(21px, 4vw, 30px);
+}
+
+
+/* =========================================
+   GAME HUD
+========================================= */
+
+.hud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 3px 16px;
+  margin: 6px auto;
+
+  max-width: 480px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+#score {
+  color: #f5d879;
+}
+
+#checkpoint {
+  color: #9bd6c2;
+}
+
+
+/* =========================================
+   GAME CANVAS
+========================================= */
+
+canvas {
+  display: block;
+  margin: auto;
+
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: min(64vh, 520px);
+  aspect-ratio: 12 / 13;
+
+  image-rendering: pixelated;
+
+  border: 3px solid #e4c766;
+  border-radius: 8px;
+
+  background: #153c37;
+}
+
+
+/* =========================================
+   TOUCH CONTROLS
+========================================= */
+
+.controls {
+  margin: 7px auto 2px;
+}
+
+.controls button,
+#restart {
+  background: #244b76;
+  color: white;
+
+  border: 1px solid #85a9d1;
+  border-radius: 8px;
+
+  padding: 7px 14px;
+  margin: 2px;
+
+  font-size: 17px;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.controls button:active {
+  background: #497fba;
+}
+
+
+/* =========================================
+   RESTART BUTTON
+========================================= */
+
+#restart {
+  font-size: 12px;
+  padding: 7px 12px;
+}
+
+
+/* =========================================
+   INSTRUCTIONS
+========================================= */
+
+.hint {
+  font-size: 11px;
+  color: #b9c9db;
+  margin: 4px;
+}
+
+
+/* =========================================
+   MISSION 02 VICTORY OVERLAY
+========================================= */
+.victory-overlay[hidden] { display: none; }
+.victory-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(3, 10, 20, .9);
+  overflow-y: auto;
+  animation: victory-fade .45s ease both;
+}
+.victory-panel {
+  width: min(100%, 490px);
+  padding: clamp(20px, 5vw, 34px);
+  border: 1px solid #d9bb69;
+  border-radius: 14px;
+  background: linear-gradient(155deg, #142b44, #071625 78%);
+  box-shadow: 0 18px 65px rgba(0, 0, 0, .5), 0 0 35px rgba(221, 190, 104, .12);
+  animation: victory-rise .5s ease both;
+}
+.victory-eyebrow, .report-heading {
+  color: #e3c36b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .16em;
+}
+.victory-trophy { color: #e3c36b; font-size: 53px; line-height: 1.2; margin: 8px 0; }
+.victory-success { color: #8fe0ae; font-size: 12px; font-weight: 800; letter-spacing: .12em; }
+.victory-panel h2 { margin: 8px 0 12px; font-size: clamp(25px, 6vw, 35px); }
+.victory-panel h2 span { color: #e3c36b; }
+.victory-description { color: #c3d2e1; font-size: 14px; line-height: 1.5; }
+.victory-report { margin: 20px 0; padding: 17px; background: #132a42; border: 1px solid #30465e; border-radius: 10px; }
+.report-heading { margin: 0 0 15px; }
+.victory-stats, .victory-collectibles { display: grid; gap: 10px; }
+.victory-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); padding-bottom: 16px; border-bottom: 1px solid #30465e; }
+.victory-collectibles { grid-template-columns: repeat(3, minmax(0, 1fr)); padding-top: 16px; }
+.victory-stats strong, .victory-collectibles strong { display: block; font-size: 23px; color: #fff; }
+.victory-stats #finalLives { color: #ff9daf; font-size: clamp(15px, 4vw, 21px); letter-spacing: 1px; }
+.victory-report small { display: block; margin-top: 5px; font-size: 10px; letter-spacing: .07em; color: #afc2d7; }
+.victory-unlocked { color: #e3c36b; font-size: 13px; font-weight: 800; letter-spacing: .12em; }
+.victory-return {
+  display: block;
+  margin-top: 20px;
+  padding: 14px 12px;
+  background: #e3c36b;
+  color: #071625;
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: .04em;
+  transition: background .2s, transform .2s;
+}
+.victory-return:hover, .victory-return:focus-visible { background: #f7d98a; transform: translateY(-2px); }
+@keyframes victory-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes victory-rise { from { transform: translateY(20px) scale(.97); opacity: 0; } to { transform: translateY(0) scale(1); opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  .victory-overlay, .victory-panel { animation: none; }
+  .victory-return { transition: none; }
+}

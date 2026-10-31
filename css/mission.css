@@ -287,3 +287,15 @@ button, a {
     animation-duration: 0.01ms !important;
   }
 }
+
+/* Campaign completion transformation */
+.campaign-complete .progress-fill { background:linear-gradient(90deg,#318c68,var(--green));box-shadow:0 0 18px rgba(102,227,160,.45); }
+.campaign-complete .mission-header .eyebrow { color:var(--green); }
+.campaign-complete .mission-card.completed { box-shadow:inset 0 0 24px rgba(102,227,160,.07); }
+.debrief-unlock[hidden] { display:none !important; }
+.debrief-unlock { max-width:800px; margin:38px auto 0; padding:35px 24px; text-align:center; border:1px solid var(--gold); background:linear-gradient(145deg,#192f48,#0c192b); box-shadow:0 0 35px rgba(245,198,107,.1); }
+.debrief-icon { font-size:54px; color:var(--gold); }
+.debrief-unlock h2 { font-size:clamp(26px,4vw,40px); margin:10px 0; }
+.debrief-unlock p { color:var(--muted); font-size:18px; }
+.debrief-button { display:inline-block; margin-top:12px; padding:15px 30px; background:var(--gold); color:#07111f; text-decoration:none; font-weight:700; font-size:18px; letter-spacing:2px; }
+.debrief-button:hover,.debrief-button:focus-visible { background:#ffe3a1; }
