@@ -1,23 +1,35 @@
 
 const questions = [
   {
-    question: "What is Agent Simpson's official threat level?",
+    question: "What time was Agent Simpson born?",
     answers: [
-      "Extremely dangerous",
-      "Moderate after 10 drinks",
-      "Harmless at all times",
-      "Classified by the government"
+      "11:42",
+      "11:24",
+      "12:36",
+      "10:58"
     ],
     correct: 1,
-    correctMessage: "THREAT ASSESSMENT VERIFIED.",
-    wrongMessage: "Have you even read your own personnel file?"
+    correctMessage: "BIRTH RECORDS VERIFIED.",
+    wrongMessage: "Maybe call Julie for help."
+  },
+  {
+    question: "What is Agent Simpson's favorite color?",
+    answers: [
+      "Blue",
+      "Green",
+      "Purple",
+      "Red"
+    ],
+    correct: 2,
+    correctMessage: "BASIC INFORMATION VERIFIED.",
+    wrongMessage: "Identity crisis detected. Are you sure you're Alex Simpson?"
   },
   {
     question: "Which of the following is a known weakness?",
     answers: [
       "Tequila",
-      "Hot dogs",
-      "Beer ball",
+      "Hot Dogs",
+      "Charlie",
       "Driving"
     ],
     correct: 0,
@@ -25,52 +37,88 @@ const questions = [
     wrongMessage: "Your liver would disagree."
   },
   {
-    question: "What is Agent Simpson's passive ability?",
+    question: "You have 07 cups left in a game of shot pong. What rerack are you running?",
     answers: [
-      "Professional Sleeper",
-      "Life of the Party",
-      "Emergency Exit",
-      "Unlimited Stamina"
-    ],
-    correct: 1,
-    correctMessage: "PASSIVE ABILITY IDENTIFIED.",
-    wrongMessage: "You really don't know your own abilities?"
-  },
-  {
-    question: "Which location is marked as the primary base of operations?",
-    answers: [
-      "Denver",
-      "New Orleans",
-      "Ann Arbor",
-      "Chicago"
+      "2-3-2",
+      "Long Zipper",
+      "Twin Towers (one has an antenna)",
+      "None"
     ],
     correct: 2,
-    correctMessage: "LOCATION CONFIRMED.",
-    wrongMessage: "GPS malfunction. Try again."
+    correctMessage: "STRATEGIC MIND CONFIRMED.",
+    wrongMessage: "Let's say you want to get a cup."
   },
   {
-    question: "What is the agent's current level?",
+    question: "Which song revives an incapacitated Agent Simpson?",
     answers: [
-      "18",
-      "19",
-      "20",
-      "21"
-    ],
-    correct: 2,
-    correctMessage: "LEVEL 20 VERIFIED.",
-    wrongMessage: "It's literally your birthday."
-  },
-  {
-    question: "Which of these is one of Agent Simpson's special skills?",
-    answers: [
-      "Solving world hunger",
-      "Beer ball",
-      "Speaking seven languages",
-      "Quantum physics"
+      "FE!N",
+      "COCAINE NOSE",
+      "Mo Bamba",
+      "Headlines"
     ],
     correct: 1,
-    correctMessage: "SPECIAL SKILL CONFIRMED.",
-    wrongMessage: "The scouting report says otherwise."
+    correctMessage: "EMERGENCY REVIVAL PROTOCOL SUCCESSFUL.",
+    wrongMessage: "Revival unsuccessful. HINT: Schyeah."
+  },
+  {
+    question: "Which of the following is NOT a standard food group for Agent Simpson's diet?",
+    answers: [
+      "Cheese",
+      "Eggs",
+      "Salad",
+      "Milk"
+    ],
+    correct: 2,
+    correctMessage: "DIETARY PREFERENCES VERIFIED.",
+    wrongMessage: "Are we being serious?"
+  },
+  {
+    question: "Which of the following songs has NOT been featured on an @a_d_simpson post?",
+    answers: [
+      "AT THE PARTY",
+      "Barking at the Moon",
+      "Pepper",
+      "NEW MAGIC WAND"
+    ],
+    correct: 3,
+    correctMessage: "DIGITAL FOOTPRINT VERIFIED.",
+    wrongMessage: "Some people like to scroll your feed."
+  },
+  {
+    question: "How many drinks did Agent Simpson consume on his birthday last year?",
+    answers: [
+      "Approximately 26",
+      "19 (obviously)",
+      "1,000,000",
+      "12 (not the most impressive)"
+    ],
+    correct: 0,
+    correctMessage: "INCIDENT REPORT CONFIRMED.",
+    wrongMessage: "The official incident report says otherwise. Recount."
+  },
+  {
+    question: "Which town is Agent Simpson's alias from?",
+    answers: [
+      "Limestone, OH",
+      "Kansas, OH",
+      "North Branch, MI",
+      "Bowling Green, OH"
+    ],
+    correct: 1,
+    correctMessage: "COVER IDENTITY CONFIRMED.",
+    wrongMessage: "Your cover story is falling apart. Get it together."
+  },
+  {
+    question: "What is Agent Simpson's greatest achievement?",
+    answers: [
+      "Surviving 20 years",
+      "Becoming the most lit, awesome human being ever",
+      "Being a Michigan Wolverine",
+      "Finding the best girlfriend in the world"
+    ],
+    correct: 3,
+    correctMessage: "SWEETNESS CONFIRMED.",
+    wrongMessage: "True, but not the greatest achievement."
   }
 ];
 
