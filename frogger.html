@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Campus Cat Crossing</title>
+
+  <link
+    rel="stylesheet"
+    href="css/frogger.css"
+  >
+</head>
+
+<body>
+  <main class="shell">
+
+    <!-- HEADER -->
+    <p class="eyebrow">
+      BIRTHDAY SIDE QUEST
+    </p>
+
+    <h1>
+      CAMPUS CAT CROSSING
+    </h1>
+
+    <!-- GAME HUD -->
+    <div class="hud">
+      <span id="lives">
+        Lives: ♥♥♥♥♥
+      </span>
+
+      <span id="score">
+        Score: 0
+      </span>
+
+      <span id="checkpoint">
+        Checkpoint: Diag
+      </span>
+    </div>
+
+    <!-- GAME STATUS -->
+    <div class="hud">
+      <span id="status">
+        Hop toward the Diag!
+      </span>
+    </div>
+
+    <!-- GAME CANVAS -->
+    <canvas
+      id="game"
+      width="480"
+      height="520"
+      aria-label="Playable scrolling cat crossing game"
+    ></canvas>
+
+    <!-- TOUCH CONTROLS -->
+    <div class="controls">
+
+      <button data-dir="up">
+        ▲
+      </button>
+
+      <div>
+        <button data-dir="left">
+          ◀
+        </button>
+
+        <button data-dir="down">
+          ▼
+        </button>
+
+        <button data-dir="right">
+          ▶
+        </button>
+      </div>
+
+    </div>
+
+    <!-- RESTART BUTTON -->
+    <button id="restart">
+      Restart
+    </button>
+
+    <!-- INSTRUCTIONS -->
+    <!-- <p class="hint">
+      Arrow keys / WASD · 5 lives · No timer
+    </p> -->
+
+
+    <!-- MISSION COMPLETE OVERLAY -->
+    <section id="victoryOverlay" class="victory-overlay" role="dialog" aria-modal="true" aria-labelledby="victoryTitle" hidden>
+      <div class="victory-panel">
+        <p class="victory-eyebrow">CLASSIFIED // CAMPAIGN OPERATIONS</p>
+        <div class="victory-trophy" aria-hidden="true">★</div>
+        <p class="victory-success">✓ MISSION SUCCESSFUL</p>
+        <h2 id="victoryTitle">MISSION 02 <span>COMPLETE</span></h2>
+        <p class="victory-description">Agent Simpson has successfully navigated the streets of Ann Arbor and reached his destination.</p>
+        <div class="victory-report">
+          <p class="report-heading">FINAL MISSION REPORT</p>
+          <div class="victory-stats">
+            <div><strong id="finalScore">0</strong><small>FINAL SCORE</small></div>
+            <div><strong id="finalLives">♥♥♥♥♥</strong><small>LIVES REMAINING</small></div>
+          </div>
+          <div class="victory-collectibles">
+            <div><strong id="finalPizza">🍕 0</strong><small>PIZZA</small></div>
+            <div><strong id="finalBeer">🍺 0</strong><small>BEER</small></div>
+            <div><strong id="finalTaco">🌮 0</strong><small>TACOS</small></div>
+          </div>
+        </div>
+        <p class="victory-unlocked">NEW MISSION UNLOCKED</p>
+        <p class="victory-description">Your final assignment awaits. Return to Mission Select to receive your next briefing.</p>
+        <a class="victory-return" href="mission.html">RETURN TO MISSION SELECT →</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- JAVASCRIPT -->
+  <script src="js/frogger.js"></script>
+</body>
+
+</html>

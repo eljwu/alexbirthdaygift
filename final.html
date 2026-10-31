@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reward Retrieval | Final Mission</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/final.css">
+  <script src="js/final.js" defer></script>
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+  <main class="final-page">
+    <header class="topbar">
+      <a href="mission.html" class="back-link">← MISSION SELECT</a>
+      <span class="classification">CLASSIFIED // EYES ONLY</span>
+      <button id="soundToggle" class="sound-button" type="button" aria-pressed="false">SOUND: OFF</button>
+    </header>
+
+    <section class="terminal" aria-live="polite">
+      <div class="terminal-top"><span>COD // SECURE NETWORK</span><span id="connectionStatus">CONNECTING</span></div>
+      <div class="terminal-content">
+        <div class="mission-tag">FINAL ASSIGNMENT // 03</div>
+        <h1>REWARD <span>RETRIEVAL</span></h1>
+        <div id="briefing" class="scene">
+          <div id="terminalLines" class="terminal-lines" aria-label="Connection progress"></div>
+          <div id="briefingBody" class="briefing-body" hidden>
+            <p class="agent-label">TO: AGENT ALEXANDER SIMPSON</p>
+            <h2>OPERATION: BIRTHDAY BOOTY</h2>
+            <p>Agent Simpson, your final objective is to recover a high-value package being held at a secure civilian location.</p>
+            <p>Intelligence has identified the drop site. Authorization is required to disclose its whereabouts.</p>
+            <div class="data-panel"><span>TARGET</span><strong>BIRTHDAY PRESENT</strong><span>LOCATION</span><strong class="encrypted">[ ENCRYPTED ]</strong><span>PRIORITY</span><strong>CRITICAL (IT'S YOUR BIRTHDAY)</strong></div>
+            <button id="decryptButton" class="primary-button" type="button">DECRYPT LOCATION →</button>
+          </div>
+        </div>
+
+        <div id="decrypting" class="scene" hidden>
+          <div class="decrypt-icon" aria-hidden="true">⌖</div>
+          <p class="overline">ACCESSING CLASSIFIED INTELLIGENCE</p>
+          <h2 id="decryptStatus">LOCATING PACKAGE...</h2>
+          <div class="progress-track"><div id="decryptFill" class="progress-fill"></div></div>
+          <p id="decryptPercent" class="mono progress-number">0% COMPLETE</p>
+          <p id="scrambleText" class="scramble mono" aria-hidden="true">XX-XXXX / REDACTED</p>
+          <button id="skipDecrypt" class="text-button" type="button">SKIP ANIMATION</button>
+        </div>
+
+        <div id="revealed" class="scene" hidden>
+          <div class="location-icon" aria-hidden="true">⌖</div>
+          <p class="overline success">TARGET LOCATION CONFIRMED</p>
+          <h2 class="reveal-title">2445 TRAVER BLVD</h2>
+          <p class="drop-label">EXACT DROP SITE</p>
+          <div class="drop-site">THE WHITE COFFEE TABLE</div>
+          <div class="data-panel"><span>PACKAGE STATUS</span><strong class="success">AWAITING PICKUP</strong><span>ASSIGNED AGENT</span><strong>ALEXANDER SIMPSON</strong><span>OBJECTIVE</span><strong>RETRIEVE THE PRESENT</strong></div>
+          <p class="instructions">Proceed to the designated location and retrieve the package. Do not return empty-handed.</p>
+          <button id="securedButton" class="primary-button" type="button">PACKAGE SECURED →</button>
+        </div>
+
+        <div id="completed" class="scene" hidden>
+          <div class="trophy" aria-hidden="true">★</div>
+          <p class="overline success">ALL OBJECTIVES COMPLETE</p>
+          <h2 class="complete-title">MISSION ACCOMPLISHED</h2>
+          <p>Congratulations, Agent Simpson. You have successfully recovered your birthday present.</p>
+          <div class="completion-list"><div>MISSION 01 // THE MEMORY TEST <span>✓</span></div><div>MISSION 02 // SAFE PASSAGE <span>✓</span></div><div>MISSION 03 // REWARD RETRIEVAL <span>✓</span></div></div>
+          <h3>HAPPY 20TH BIRTHDAY!</h3>
+          <p>You survived the interrogation, dodged the traffic, and secured the loot. Not bad for a guy who just turned 20.</p>
+          <p class="personal-message">Love you, booboobear. ♡</p>
+          <div class="rank">FINAL RANK: BIG DAWG</div>
+          <a href="mission.html" class="primary-button link-button">VIEW COMPLETED CAMPAIGN →</a>
+        </div>
+      </div>
+      <div class="terminal-bottom"><span>LEVEL 20 // OPERATION BIRTHDAY</span><span id="terminalClock">SECURE CHANNEL ACTIVE</span></div>
+    </section>
+  </main>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+</body>
+</html>
