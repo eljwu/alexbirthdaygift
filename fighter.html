@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Choose Your Fighter</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/fighter.css" />
+</head>
+
+<body>
+
+  <main class="fighter-page">
+
+    <!-- Top HUD -->
+    <header class="top-bar">
+
+      <div class="campaign-label">
+        <span class="campaign-dot"></span>
+        BIRTHDAY CAMPAIGN
+      </div>
+
+      <div class="level-label">
+        LEVEL 20
+      </div>
+
+    </header>
+
+
+    <!-- Heading -->
+    <section class="heading-section">
+
+      <p class="eyebrow">
+        HERO SELECTION
+      </p>
+
+      <h1>
+        CHOOSE YOUR FIGHTER
+      </h1>
+
+      <p class="instructions">
+        Select a hero to begin the campaign.
+      </p>
+
+    </section>
+
+
+    <!-- Main character display -->
+    <section class="hero-display">
+
+      <!-- Large image -->
+      <div class="hero-image-panel">
+
+        <div class="hero-number" id="heroNumber">
+          01
+        </div>
+
+        <div class="large-placeholder" id="largeHeroImage">
+          <!-- <img src="img/fighters/jack.jpeg" alt="Selected fighter" id="heroPreview"> -->
+        </div>
+
+        <div class="image-decoration image-decoration-one"></div>
+        <div class="image-decoration image-decoration-two"></div>
+
+      </div>
+
+
+      <!-- Character information -->
+      <div class="hero-info">
+
+        <p class="hero-role" id="heroRole">
+          DAMAGE
+        </p>
+
+        <h2 id="heroName">
+          A
+        </h2>
+
+        <p class="hero-title" id="heroTitle">
+          "A title"
+        </p>
+
+        <div class="divider"></div>
+
+        <p class="hero-description" id="heroDescription">
+          A description
+        </p>
+
+
+        <div class="hero-meta">
+
+          <div class="meta-item">
+            <span class="meta-label">
+              STATUS
+            </span>
+
+            <span class="meta-value" id="heroStatus">
+              AVAILABLE
+            </span>
+          </div>
+
+          <div class="meta-item">
+            <span class="meta-label">
+              DIFFICULTY
+            </span>
+
+            <span class="meta-value" id="heroDifficulty">
+              ★★★☆☆
+            </span>
+          </div>
+
+        </div>
+
+
+        <button
+          class="select-button"
+          id="selectButton"
+          type="button"
+        >
+          SELECT HERO
+        </button>
+
+        <p
+          class="selection-message"
+          id="selectionMessage"
+          aria-live="polite"
+        ></p>
+
+      </div>
+
+    </section>
+
+
+    <!-- Hero roster -->
+    <section class="roster-section">
+
+      <div class="roster-heading">
+
+        <span>
+          HERO ROSTER
+        </span>
+
+        <span class="roster-count">
+          8 AVAILABLE
+        </span>
+
+      </div>
+
+
+      <div class="hero-roster" id="heroRoster">
+
+        <button class="hero-card selected" type="button" data-hero="a">
+            <div class="card-image">
+              <img src="img/fighters/jack.JPEG" alt="Jack">
+            </div>
+            <div class="card-info">
+            <span class="card-name">JACK</span>
+            <span class="card-role">SPECIALIST</span>
+            </div>
+        </button>
+
+        <button class="hero-card" type="button" data-hero="b">
+            <div class="card-image">
+              <img src="img/fighters/leim.jpg" alt="Leim">
+            </div>
+            <div class="card-info">
+            <span class="card-name">LEIM</span>
+            <span class="card-role">DEFENDER</span>
+            </div>
+        </button>
+
+        <button class="hero-card" type="button" data-hero="c">
+            <div class="card-image">
+              <img src="img/fighters/nick.jpg" alt="Nick">
+            </div>
+            <div class="card-info">
+            <span class="card-name">NICK</span>
+            <span class="card-role">SNIPER</span>
+            </div>
+        </button>
+
+        <button class="hero-card" type="button" data-hero="d">
+            <div class="card-image">
+              <img src="img/fighters/sam.jpg" alt="Sam">
+            </div>
+            <div class="card-info">
+            <span class="card-name">SAM</span>
+            <span class="card-role">BERSERKER</span>
+            </div>
+        </button>
+
+        <button class="hero-card" type="button" data-hero="e">
+            <div class="card-image">
+              <img src="img/fighters/charlie.jpg" alt="Charlie">
+            </div>
+            <div class="card-info">
+            <span class="card-name">CHARLIE</span>
+            <span class="card-role">SUPPORT</span>
+            </div>
+        </button>
+
+        <button class="hero-card" type="button" data-hero="f">
+            <div class="card-image">
+              <img src="img/fighters/el.jpg" alt="El">
+            </div>
+            <div class="card-info">
+            <span class="card-name">EL</span>
+            <span class="card-role">ROGUE</span>
+            </div>
+        </button>
+
+        <button class="hero-card" type="button" data-hero="g">
+            <div class="card-image">
+              <img src="img/fighters/will.jpeg" alt="Will">
+            </div>
+            <div class="card-info">
+            <span class="card-name">WILL</span>
+            <span class="card-role">DAMAGE</span>
+            </div>
+        </button>
+
+        <button
+            class="hero-card birthday-card"
+            type="button"
+            data-hero="birthday"
+        >
+            <div class="card-image">
+              <img src="img/fighters/alex.jpg" alt="Birthday Boy">
+            </div>
+            <div class="card-info">
+            <span class="card-name">BIRTHDAY BOY</span>
+            <span class="card-role">LEVEL 20</span>
+            </div>
+        </button>
+
+    </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- Lock-in screen -->
+  <div
+    class="lock-screen"
+    id="lockScreen"
+    aria-hidden="true"
+  >
+
+    <div class="lock-content">
+
+      <p class="lock-small">
+        HERO SELECTED
+      </p>
+
+      <h2 class="lock-name" id="lockName">
+        BIRTHDAY BOY
+      </h2>
+
+      <p class="lock-level">
+        LEVEL 20
+      </p>
+
+      <div class="loading-line">
+        <div class="loading-fill"></div>
+      </div>
+
+      <p class="lock-loading">
+        LOADING HERO PROFILE...
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <script src="js/fighter.js"></script>
+
+</body>
+</html>

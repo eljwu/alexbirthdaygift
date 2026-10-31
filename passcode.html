@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One More Thing</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/passcode.css" />
+</head>
+
+<body>
+
+  <main class="passcode-page">
+
+    <section class="passcode-card">
+
+      <p class="eyebrow">one more thing</p>
+
+      <h1>For your eyes only.</h1>
+
+      <p class="hint">
+        Enter the passcode to unlock the rest.
+      </p>
+
+      <p class="hint">
+        (Hint: It's the name of the vodka I got you last year.)
+      </p>
+
+      <form id="passcodeForm">
+
+        <input
+          type="password"
+          id="passcodeInput"
+          autocomplete="off"
+          placeholder="passcode"
+          aria-label="Passcode"
+        />
+
+        <button type="submit">
+          unlock
+        </button>
+
+      </form>
+
+      <p class="message" id="message"></p>
+
+    </section>
+
+  </main>
+
+  <script src="js/passcode.js"></script>
+</body>
+</html>

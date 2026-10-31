@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Letter for You</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Optional Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Homemade+Apple&family=Inter:wght@300;400&display=swap"
+    rel="stylesheet"
+  >
+
+</head>
+
+<body>
+
+  <main class="page">
+
+    <div class="intro">
+      <h1>A little gift for your birthday</h1>
+      <p>NOVEMBER 3, 2026</p>
+    </div>
+
+    <div
+      class="scene"
+      id="scene"
+      role="button"
+      tabindex="0"
+      aria-label="Open the envelope"
+    >
+
+      <div class="envelope" id="envelope">
+
+        <!-- FRONT -->
+        <div class="face front">
+
+          <div class="stamp">
+            WITH<br>LOVE
+          </div>
+
+          <div class="postmark"></div>
+
+          <div class="address">
+            <span class="for">For</span>
+
+            <div class="name">Alex</div>
+
+            <div class="small">
+              my sunshine
+            </div>
+          </div>
+
+        </div>
+
+        <!-- BACK -->
+        <div class="face back">
+
+          <!-- Letter inside -->
+          <div class="letter">
+            <div class="letter-content">
+
+              <div class="tiny">
+                just for you
+              </div>
+
+              <h2>Hi, my love.</h2>
+
+              <p>
+                I made you something since I can't be there with you.
+              </p>
+
+            </div>
+          </div>
+
+          <div class="back-base"></div>
+          <div class="bottom-fold"></div>
+
+          <!-- Envelope flap -->
+          <div class="flap"></div>
+
+          <!-- Wax seal -->
+          <div class="seal">
+            <span class="seal-initial">E</span>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="instruction" id="instruction">
+      click the envelope
+    </div>
+
+    <button
+      class="continue-button"
+      id="continueButton"
+      type="button"
+    >
+      continue →
+    </button>
+
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

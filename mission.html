@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mission Select | Level 20</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/mission.css">
+  <script src="js/mission.js" defer></script>
+</head>
+
+<body>
+  <main class="mission-page">
+
+    <header class="mission-header">
+      <div class="eyebrow">CLASSIFIED // CAMPAIGN OPERATIONS</div>
+      <h1>MISSION <span>SELECT</span></h1>
+      <p>
+        AGENT SIMPSON, YOUR FINAL ASSIGNMENTS AWAIT.
+        COMPLETE ALL MISSIONS TO UNLOCK YOUR REWARD.
+      </p>
+    </header>
+
+    <section class="campaign-progress">
+      <div class="progress-heading">
+        <span>CAMPAIGN PROGRESS</span>
+        <span id="progressText">0 / 3 COMPLETE</span>
+      </div>
+
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+    </section>
+
+    <section class="mission-grid">
+
+      <!-- MISSION 01 -->
+      <article class="mission-card" id="mission1">
+        <div class="card-top">
+          <span class="mission-number">MISSION // 01</span>
+          <span class="mission-status">AVAILABLE</span>
+        </div>
+
+        <div class="mission-symbol">?</div>
+
+        <div class="card-content">
+          <div class="mission-type">INTELLIGENCE // ASSESSMENT</div>
+          <h2>THE MEMORY TEST</h2>
+          <p>
+            Your knowledge will be put to the test.
+            Answer the questions, prove your intelligence,
+            and unlock your next assignment.
+          </p>
+        </div>
+
+        <button class="mission-button" data-mission="1">
+          BEGIN MISSION →
+        </button>
+      </article>
+
+      <!-- MISSION 02 -->
+      <article class="mission-card locked" id="mission2">
+        <div class="card-top">
+          <span class="mission-number">MISSION // 02</span>
+          <span class="mission-status">LOCKED</span>
+        </div>
+
+        <div class="mission-symbol">✕</div>
+
+        <div class="card-content">
+          <div class="mission-type">FIELD OPERATIONS // SURVIVAL</div>
+          <h2>SAFE PASSAGE</h2>
+          <p>
+            Navigate hostile territory and avoid incoming
+            threats. Reach your destination in one piece
+            to proceed.
+          </p>
+        </div>
+
+        <button class="mission-button" data-mission="2" disabled>
+          MISSION LOCKED
+        </button>
+      </article>
+
+      <!-- FINAL MISSION -->
+      <article class="mission-card locked final-card" id="mission3">
+        <div class="card-top">
+          <span class="mission-number">FINAL // 03</span>
+          <span class="mission-status">LOCKED</span>
+        </div>
+
+        <div class="mission-symbol">★</div>
+
+        <div class="card-content">
+          <div class="mission-type">TOP SECRET // FINAL OBJECTIVE</div>
+          <h2>REWARD RETRIEVAL</h2>
+          <p>
+            All previous assignments must be completed.
+            Your final objective remains classified
+            until further notice.
+          </p>
+        </div>
+
+        <button class="mission-button" data-mission="3" disabled>
+          CLASSIFIED
+        </button>
+      </article>
+
+    </section>
+
+    <footer class="mission-footer">
+      <a href="profile.html" class="back-link">
+        ← PERSONNEL FILE
+      </a>
+      <span>LEVEL 20 // OPERATION BIRTHDAY</span>
+    </footer>
+
+  </main>
+</body>
+</html>

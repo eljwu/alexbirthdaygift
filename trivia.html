@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mission 01 | Intelligence Assessment</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/trivia.css">
+  <script src="js/trivia.js" defer></script>
+</head>
+
+<body>
+  <main class="trivia-page">
+
+    <header class="trivia-header">
+      <a href="mission.html" class="back-link">← MISSION SELECT</a>
+      <span>OPERATION BIRTHDAY // MISSION 01</span>
+    </header>
+
+    <!-- BRIEFING SCREEN -->
+    <section id="briefingScreen" class="screen briefing-screen">
+      <div class="classification">CLASSIFIED // INTELLIGENCE DIVISION</div>
+      <div class="briefing-icon">?</div>
+
+      <h1>THE <span>MEMORY TEST</span></h1>
+      <div class="mission-subtitle">MISSION 01 // INTELLIGENCE ASSESSMENT</div>
+
+      <div class="briefing-box">
+        <h2>MISSION BRIEFING</h2>
+        <p>
+          AGENT SIMPSON, YOUR MEMORY AND INTELLIGENCE
+          ARE ABOUT TO BE EVALUATED.
+        </p>
+        <p>
+          ANSWER THE FOLLOWING QUESTIONS TO PROVE
+          YOUR QUALIFICATIONS AND UNLOCK YOUR NEXT ASSIGNMENT.
+        </p>
+
+        <div class="briefing-stats">
+          <div><strong id="briefingCount">06</strong><span>QUESTIONS</span></div>
+          <div><strong>∞</strong><span>ATTEMPTS</span></div>
+          <div><strong>100%</strong><span>REQUIRED</span></div>
+        </div>
+      </div>
+
+      <button id="startButton" class="primary-button">
+        INITIATE ASSESSMENT →
+      </button>
+    </section>
+
+    <!-- QUIZ SCREEN -->
+    <section id="quizScreen" class="screen quiz-screen hidden">
+
+      <div class="quiz-topline">
+        <span>INTELLIGENCE ASSESSMENT</span>
+        <span id="questionCounter">QUESTION 01 / 06</span>
+      </div>
+
+      <div class="progress-track">
+        <div id="quizProgress" class="progress-fill"></div>
+      </div>
+
+      <div class="question-panel">
+        <div class="question-label">CURRENT OBJECTIVE</div>
+        <h2 id="questionText"></h2>
+      </div>
+
+      <div id="answerGrid" class="answer-grid"></div>
+
+      <div id="feedback" class="feedback" aria-live="polite"></div>
+
+      <div class="quiz-bottom">
+        <span id="scoreText">CORRECT ANSWERS: 0</span>
+        <span>AGENT // A.D. SIMPSON</span>
+      </div>
+    </section>
+
+    <!-- COMPLETION SCREEN -->
+    <section id="completeScreen" class="screen complete-screen hidden">
+      <div class="classification">MISSION REPORT // VERIFIED</div>
+      <div class="completion-icon">★</div>
+
+      <h1>MISSION <span>COMPLETE</span></h1>
+      <p class="completion-subtitle">INTELLIGENCE ASSESSMENT PASSED</p>
+
+      <div class="results-panel">
+        <div class="result-label">FINAL ASSESSMENT</div>
+        <div id="finalScore" class="final-score">6 / 6</div>
+        <div class="result-status">CLEARANCE GRANTED</div>
+        <p>
+          Congratulations, Agent Simpson.
+          Your intelligence has been deemed sufficient
+          for further deployment.
+        </p>
+        <div class="unlock-notice">
+          <span>✓</span> MISSION 02 // SAFE PASSAGE UNLOCKED
+        </div>
+      </div>
+
+      <button id="continueButton" class="primary-button">
+        RETURN TO MISSION SELECT →
+      </button>
+    </section>
+
+  </main>
+</body>
+</html>

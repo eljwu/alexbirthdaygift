@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Known Locations</title>
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Rajdhani:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="css/locations.css"
+  >
+</head>
+
+<body>
+
+  <main class="locations-page">
+
+    <!-- HEADER -->
+    <header class="locations-header">
+
+      <div>
+
+        <p class="eyebrow">
+          CLASSIFIED PERSONNEL FILE
+        </p>
+
+        <h1>
+          KNOWN LOCATIONS
+        </h1>
+
+        <p class="subtitle">
+          Confirmed subject activity
+        </p>
+
+        <h2>
+            MAP COMPLETION: 12%
+        </h2>
+
+      </div>
+
+      <div class="subject-tag">
+        SUBJECT: ADS-020
+      </div>
+
+    </header>
+
+
+    <!-- MAP STATUS BAR -->
+    <div class="map-toolbar">
+
+      <div>
+
+        <span class="toolbar-label">
+          CURRENT VIEW
+        </span>
+
+        <span
+          class="toolbar-value"
+          id="mapViewLabel"
+        >
+          UNITED STATES
+        </span>
+
+      </div>
+
+
+      <button
+        class="back-button hidden"
+        id="backButton"
+        type="button"
+      >
+        ← RETURN TO NATIONAL MAP
+      </button>
+
+    </div>
+
+
+    <!-- MAIN MAP AREA -->
+    <section class="map-layout">
+
+      <div class="map-container">
+
+        <div id="map"></div>
+
+
+        <!-- Map legend -->
+        <div class="map-legend">
+
+          <div>
+            <span class="legend-dot"></span>
+            CONFIRMED LOCATION
+          </div>
+
+          <div>
+            <span class="legend-star">
+              ★
+            </span>
+            PRIMARY BASE
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- LOCATION PANEL -->
+      <aside
+        class="location-panel"
+        id="locationPanel"
+      >
+
+        <div
+          class="empty-location"
+          id="emptyLocation"
+        >
+
+          <p class="eyebrow">
+            LOCATION INTEL
+          </p>
+
+          <h2>
+            SELECT A LOCATION
+          </h2>
+
+          <p>
+            Select a marker to access
+            photographic evidence and
+            associated records.
+          </p>
+
+        </div>
+
+
+        <div
+          class="location-content hidden"
+          id="locationContent"
+        >
+
+          <div class="location-heading">
+
+            <div>
+
+              <p class="eyebrow">
+                LOCATION RECORD
+              </p>
+
+              <h2 id="locationName">
+                Denver
+              </h2>
+
+            </div>
+
+            <span
+              class="location-code"
+              id="locationCode"
+            >
+              LOC-01
+            </span>
+
+          </div>
+
+
+          <p
+            class="location-description"
+            id="locationDescription"
+          >
+            Description goes here.
+          </p>
+
+
+          <!-- Gallery -->
+          <div class="gallery">
+
+            <div
+              class="main-photo"
+              id="mainPhoto"
+            >
+              Picture
+            </div>
+
+
+            <div
+              class="gallery-thumbnails"
+              id="galleryThumbnails"
+            >
+            </div>
+
+          </div>
+
+
+          <div class="location-meta">
+
+            <div>
+              <span>
+                STATUS
+              </span>
+
+              <strong>
+                CONFIRMED
+              </strong>
+            </div>
+
+            <div>
+              <span>
+                EVIDENCE
+              </span>
+
+              <strong id="photoCount">
+                3 FILES
+              </strong>
+            </div>
+
+          </div>
+
+        </div>
+
+      </aside>
+
+    </section>
+
+
+    <a
+        class="continue-button"
+        href="profile.html"
+        >
+        ← RETURN TO PERSONNEL FILE
+    </a>
+
+  </main>
+
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  ></script>
+
+  <script src="js/locations.js"></script>
+
+</body>
+</html>
