@@ -1,0 +1,1017 @@
+:root {
+  --background: #0e1520;
+  --background-light: #172231;
+
+  --panel: rgba(24, 35, 50, 0.88);
+  --panel-light: #202d3d;
+
+  --text: #f4f7fb;
+  --muted: #8f9aaa;
+
+  --blue: #56baff;
+  --blue-light: #bce6ff;
+  --blue-dark: #247ec3;
+
+  --gold: #f0b554;
+  --gold-light: #ffd68c;
+
+  --border: rgba(255, 255, 255, 0.12);
+
+  --danger: #ff7c72;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+
+body {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 70% 20%,
+      rgba(67, 149, 214, 0.13),
+      transparent 36%
+    ),
+    linear-gradient(
+      145deg,
+      #101924,
+      #0b111a
+    );
+
+  color: var(--text);
+
+  font-family: "Inter", sans-serif;
+
+  overflow-x: hidden;
+}
+
+
+/* --------------------------------
+   BACKGROUND DETAIL
+-------------------------------- */
+
+body::before {
+  content: "";
+
+  position: fixed;
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.22;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.025) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    60px 60px;
+}
+
+
+/* --------------------------------
+   PAGE
+-------------------------------- */
+
+.fighter-page {
+  width: min(1180px, calc(100% - 40px));
+
+  margin: 0 auto;
+
+  padding:
+    28px 0
+    55px;
+}
+
+
+/* --------------------------------
+   TOP BAR
+-------------------------------- */
+
+.top-bar {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 55px;
+
+  font-family: "Rajdhani", sans-serif;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  letter-spacing: .15em;
+}
+
+
+.campaign-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: var(--muted);
+}
+
+
+.campaign-dot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: var(--blue);
+
+  box-shadow:
+    0 0 12px rgba(86, 186, 255, .75);
+}
+
+
+.level-label {
+  color: var(--gold);
+}
+
+
+/* --------------------------------
+   HEADING
+-------------------------------- */
+
+.heading-section {
+  margin-bottom: 35px;
+}
+
+
+.eyebrow {
+  margin:
+    0 0 8px;
+
+  font-family: "Rajdhani", sans-serif;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  letter-spacing: .21em;
+
+  color: var(--blue);
+}
+
+
+h1 {
+  margin:
+    0 0 6px;
+
+  font-family: "Rajdhani", sans-serif;
+
+  font-size:
+    clamp(42px, 7vw, 72px);
+
+  font-weight: 700;
+
+  line-height: .95;
+
+  letter-spacing: -.02em;
+}
+
+
+.instructions {
+  margin: 13px 0 0;
+
+  color: var(--muted);
+
+  font-size: 15px;
+}
+
+
+/* --------------------------------
+   MAIN HERO DISPLAY
+-------------------------------- */
+
+.hero-display {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.2fr)
+    minmax(300px, .8fr);
+
+  min-height: 490px;
+
+  margin-bottom: 45px;
+
+  border:
+    1px solid var(--border);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(35, 49, 67, .80),
+      rgba(17, 27, 40, .92)
+    );
+
+  clip-path:
+    polygon(
+      18px 0,
+      100% 0,
+      100% calc(100% - 18px),
+      calc(100% - 18px) 100%,
+      0 100%,
+      0 18px
+    );
+
+  overflow: hidden;
+}
+
+
+/* --------------------------------
+   LARGE HERO IMAGE
+-------------------------------- */
+
+.hero-image-panel {
+  position: relative;
+
+  min-height: 490px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(92, 184, 247, .13),
+      transparent 55%
+    ),
+    linear-gradient(
+      150deg,
+      #27374a,
+      #162231
+    );
+}
+
+
+/* .large-placeholder {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Rajdhani", sans-serif;
+
+  font-size:
+    clamp(30px, 6vw, 64px);
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  color:
+    rgba(255,255,255,.20);
+
+  transition:
+    opacity .25s ease,
+    transform .25s ease;
+} */
+.large-placeholder {
+  overflow: hidden;
+  min-width: 0;
+  min-height: 0;
+}
+
+.large-placeholder img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.large-placeholder.changing {
+  opacity: 0;
+
+  transform:
+    scale(.98);
+}
+
+
+.hero-number {
+  position: absolute;
+
+  top: 24px;
+  left: 28px;
+
+  z-index: 3;
+
+  font-family: "Rajdhani", sans-serif;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: var(--blue);
+
+  letter-spacing: .15em;
+}
+
+
+.image-decoration {
+  position: absolute;
+
+  pointer-events: none;
+
+  border:
+    1px solid rgba(255,255,255,.07);
+}
+
+
+.image-decoration-one {
+  width: 280px;
+  height: 280px;
+
+  right: -80px;
+  top: -100px;
+
+  transform:
+    rotate(45deg);
+}
+
+
+.image-decoration-two {
+  width: 180px;
+  height: 180px;
+
+  left: -90px;
+  bottom: -80px;
+
+  transform:
+    rotate(45deg);
+}
+
+
+/* --------------------------------
+   HERO INFO
+-------------------------------- */
+
+.hero-info {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding:
+    50px 48px;
+
+  background:
+    rgba(10, 17, 27, .32);
+}
+
+
+.hero-role {
+  margin:
+    0 0 5px;
+
+  font-family: "Rajdhani", sans-serif;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  letter-spacing: .18em;
+
+  color: var(--blue);
+}
+
+
+.hero-info h2 {
+  margin: 0;
+
+  font-family: "Rajdhani", sans-serif;
+
+  font-size:
+    clamp(52px, 7vw, 78px);
+
+  line-height: .92;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+
+.hero-title {
+  margin:
+    12px 0 0;
+
+  font-family: "Rajdhani", sans-serif;
+
+  font-size: 21px;
+
+  color: var(--muted);
+}
+
+
+.divider {
+  width: 55px;
+  height: 3px;
+
+  margin:
+    28px 0;
+
+  background: var(--blue);
+}
+
+
+.hero-description {
+  min-height: 54px;
+
+  margin:
+    0 0 32px;
+
+  line-height: 1.65;
+
+  color:
+    #c8d0da;
+}
+
+
+.hero-meta {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 12px;
+
+  margin-bottom: 28px;
+}
+
+
+.meta-item {
+  padding:
+    13px 15px;
+
+  border:
+    1px solid var(--border);
+
+  background:
+    rgba(255,255,255,.025);
+}
+
+
+.meta-label,
+.meta-value {
+  display: block;
+
+  font-family: "Rajdhani", sans-serif;
+}
+
+
+.meta-label {
+  margin-bottom: 4px;
+
+  font-size: 10px;
+
+  letter-spacing: .16em;
+
+  color: var(--muted);
+}
+
+
+.meta-value {
+  font-size: 14px;
+
+  letter-spacing: .06em;
+
+  color: var(--text);
+}
+
+
+/* --------------------------------
+   SELECT BUTTON
+-------------------------------- */
+
+.select-button {
+  width: 100%;
+
+  min-height: 52px;
+
+  border: none;
+
+  clip-path:
+    polygon(
+      8px 0,
+      100% 0,
+      100% calc(100% - 8px),
+      calc(100% - 8px) 100%,
+      0 100%,
+      0 8px
+    );
+
+  background:
+    linear-gradient(
+      135deg,
+      #38a9ee,
+      #247fc3
+    );
+
+  color: white;
+
+  font-family: "Rajdhani", sans-serif;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  letter-spacing: .12em;
+
+  cursor: pointer;
+
+  transition:
+    transform .2s ease,
+    filter .2s ease;
+}
+
+
+.select-button:hover {
+  filter: brightness(1.12);
+
+  transform:
+    translateY(-1px);
+}
+
+
+.select-button.birthday-ready {
+  background:
+    linear-gradient(
+      135deg,
+      var(--gold-light),
+      var(--gold)
+    );
+
+  color: #302313;
+}
+
+
+.selection-message {
+  min-height: 24px;
+
+  margin:
+    14px 0 0;
+
+  text-align: center;
+
+  color: var(--danger);
+
+  font-size: 13px;
+}
+
+
+/* --------------------------------
+   ROSTER
+-------------------------------- */
+
+.roster-section {
+  width: 100%;
+}
+
+
+.roster-heading {
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  margin-bottom: 13px;
+
+  font-family:
+    "Rajdhani",
+    sans-serif;
+
+  font-size: 12px;
+
+  letter-spacing: .16em;
+
+  color: var(--muted);
+}
+
+
+.hero-roster {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 10px;
+}
+
+
+/* --------------------------------
+   HERO CARD
+-------------------------------- */
+
+.hero-card {
+  position: relative;
+
+  min-width: 0;
+
+  padding: 0;
+
+  border:
+    1px solid var(--border);
+
+  background: var(--panel);
+
+  color: var(--text);
+
+  cursor: pointer;
+
+  text-align: left;
+
+  overflow: hidden;
+
+  clip-path:
+    polygon(
+      8px 0,
+      100% 0,
+      100% calc(100% - 8px),
+      calc(100% - 8px) 100%,
+      0 100%,
+      0 8px
+    );
+
+  transition:
+    transform .22s ease,
+    border-color .22s ease,
+    background .22s ease;
+}
+
+
+.hero-card:hover {
+  transform:
+    translateY(-5px);
+
+  background:
+    #243246;
+}
+
+
+.hero-card.selected {
+  border-color:
+    var(--blue);
+
+  background:
+    #24364b;
+
+  box-shadow:
+    inset 0 -4px 0
+    var(--blue);
+}
+
+
+.hero-card.selected.birthday-card {
+  border-color:
+    var(--gold);
+
+  box-shadow:
+    inset 0 -4px 0
+    var(--gold);
+}
+
+
+.card-image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  position: relative;
+  overflow: hidden;
+
+  background: linear-gradient(
+    145deg,
+    #314257,
+    #1d2938
+  );
+}
+
+.card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.card-info {
+  display: flex;
+
+  flex-direction: column;
+
+  padding:
+    11px 12px 13px;
+}
+
+
+.card-name {
+  font-family:
+    "Rajdhani",
+    sans-serif;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow:
+    ellipsis;
+}
+
+
+.card-role {
+  margin-top: 2px;
+
+  font-size: 9px;
+
+  letter-spacing: .15em;
+
+  color: var(--muted);
+}
+
+
+/* --------------------------------
+   LOCK SCREEN
+-------------------------------- */
+
+.lock-screen {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1000;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background:
+    rgba(6, 11, 18, .96);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  pointer-events: none;
+
+  transition:
+    opacity .45s ease,
+    visibility .45s ease;
+}
+
+
+.lock-screen.visible {
+  opacity: 1;
+
+  visibility: visible;
+
+  pointer-events: auto;
+}
+
+
+.lock-content {
+  width:
+    min(560px, 100%);
+
+  text-align: center;
+}
+
+
+.lock-small {
+  margin:
+    0 0 12px;
+
+  font-family:
+    "Rajdhani",
+    sans-serif;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  letter-spacing: .24em;
+
+  color: var(--blue);
+}
+
+
+.lock-name {
+  margin: 0;
+
+  font-family:
+    "Rajdhani",
+    sans-serif;
+
+  font-size:
+    clamp(58px, 12vw, 105px);
+
+  line-height: .9;
+
+  text-transform:
+    uppercase;
+}
+
+
+.lock-level {
+  margin:
+    18px 0 35px;
+
+  font-family:
+    "Rajdhani",
+    sans-serif;
+
+  font-size: 24px;
+
+  letter-spacing: .14em;
+
+  color: var(--gold);
+}
+
+
+.loading-line {
+  width: 100%;
+  height: 4px;
+
+  overflow: hidden;
+
+  background:
+    rgba(255,255,255,.1);
+}
+
+
+.loading-fill {
+  width: 0;
+  height: 100%;
+
+  background:
+    var(--blue);
+}
+
+
+.lock-screen.visible
+.loading-fill {
+  animation:
+    loadHero 1.6s
+    .25s ease
+    forwards;
+}
+
+
+.lock-loading {
+  margin-top: 14px;
+
+  font-family:
+    "Rajdhani",
+    sans-serif;
+
+  font-size: 11px;
+
+  letter-spacing: .18em;
+
+  color: var(--muted);
+}
+
+
+@keyframes loadHero {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+
+/* --------------------------------
+   MOBILE
+-------------------------------- */
+
+@media (max-width: 800px) {
+
+  .fighter-page {
+    width:
+      min(100% - 28px, 700px);
+  }
+
+  .top-bar {
+    margin-bottom: 38px;
+  }
+
+  .hero-display {
+    grid-template-columns: 1fr;
+    min-width: 0;
+  }
+
+  .hero-image-panel {
+    min-height: 380px;
+    min-width: 0;
+  }
+
+  .hero-info {
+    padding:
+      36px 30px;
+    min-width: 0;
+  }
+
+  .hero-roster {
+    display: flex;
+
+    gap: 10px;
+
+    overflow-x: auto;
+
+    padding-bottom: 10px;
+
+    scroll-snap-type:
+      x mandatory;
+  }
+
+  .hero-card {
+    flex:
+      0 0 135px;
+
+    scroll-snap-align:
+      start;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .fighter-page {
+    width:
+      calc(100% - 24px);
+
+    padding-top: 20px;
+  }
+
+  .level-label {
+    font-size: 11px;
+  }
+
+  .campaign-label {
+    font-size: 11px;
+  }
+
+  .heading-section {
+    margin-bottom: 25px;
+  }
+
+  h1 {
+    font-size:
+      clamp(40px, 15vw, 56px);
+  }
+
+  .hero-image-panel {
+    min-height: 310px;
+  }
+
+  .hero-info {
+    padding:
+      30px 22px;
+  }
+
+  .hero-info h2 {
+    font-size: 58px;
+  }
+
+  .hero-meta {
+    grid-template-columns:
+      1fr;
+  }
+
+}
