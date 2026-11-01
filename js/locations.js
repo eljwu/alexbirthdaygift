@@ -17,9 +17,9 @@ const nationalLocations = {
       "Good thing we live here now.",
 
     photos: [
-      "img/locations/denver1.jpg",
+      "img/locations/denver1.JPG",
       "img/locations/denver2.jpg",
-      "img/locations/denver3.jpeg"
+      "img/locations/denver3.JPEG"
     ]
   },
 
@@ -59,7 +59,7 @@ const nationalLocations = {
     photos: [
       "img/locations/chicago1.jpg",
       "img/locations/chicago2.jpg",
-      "img/locations/chicago3.jpg"
+      "img/locations/chicago3.JPG"
     ]
   },
 
@@ -77,9 +77,9 @@ const nationalLocations = {
       "First camping trip of many.",
 
     photos: [
-      "img/locations/tahquamenon1.jpg",
-      "img/locations/tahquamenon2.jpg",
-      "img/locations/tahquamenon3.jpg"
+      "img/locations/tahquamenon1.JPG",
+      "img/locations/tahquamenon2.JPG",
+      "img/locations/tahquamenon3.JPG"
     ]
   },
 
@@ -117,7 +117,7 @@ const nationalLocations = {
     photos: [
       "img/locations/pr1.jpg",
       "img/locations/pr2.jpg",
-      "img/locations/pr3.jpg"
+      "img/locations/pr3.JPG"
     ]
   }
 
@@ -155,10 +155,10 @@ const annArborLocations = {
       "Triangle Fraternity (touse)",
 
     photos: [
-      "img/locations/aa/triangle/tri1.jpeg",
+      "img/locations/aa/triangle/tri1.JPEG",
       "img/locations/aa/triangle/tri2.jpg",
       "img/locations/aa/triangle/tri3.jpg",
-      "img/locations/aa/triangle/tri4.jpg",
+      "img/locations/aa/triangle/tri4.JPG",
       "img/locations/aa/triangle/tri5.jpg",
       "img/locations/aa/triangle/tri6.jpg",
       "img/locations/aa/triangle/tri7.jpg",
@@ -168,7 +168,7 @@ const annArborLocations = {
       "img/locations/aa/triangle/tri11.jpg",
       "img/locations/aa/triangle/tri12.jpg",
       "img/locations/aa/triangle/tri13.jpg",
-      "img/locations/aa/triangle/tri14.jpg",
+      "img/locations/aa/triangle/tri14.JPG",
       "img/locations/aa/triangle/tri15.jpg"
     ]
   },
@@ -187,16 +187,16 @@ const annArborLocations = {
     photos: [
       "img/locations/aa/home/home1.jpg",
       "img/locations/aa/home/home2.jpg",
-      "img/locations/aa/home/home3.jpg",
-      "img/locations/aa/home/home4.jpg",
+      "img/locations/aa/home/home3.JPG",
+      "img/locations/aa/home/home4.JPG",
       "img/locations/aa/home/home5.jpg",
-      "img/locations/aa/home/home6.jpg",
-      "img/locations/aa/home/home7.jpg",
-      "img/locations/aa/home/home8.jpg",
-      "img/locations/aa/home/home9.jpg",
+      "img/locations/aa/home/home6.JPG",
+      "img/locations/aa/home/home7.JPG",
+      "img/locations/aa/home/home8.JPG",
+      "img/locations/aa/home/home9.JPG",
       "img/locations/aa/home/home10.jpg",
-      "img/locations/aa/home/home11.jpg",
-      "img/locations/aa/home/home12.jpg"
+      "img/locations/aa/home/home11.JPG",
+      "img/locations/aa/home/home12.JPG"
     ]
   },
 
@@ -229,11 +229,11 @@ const annArborLocations = {
       "Push Skeeps?",
 
     photos: [
-      "img/locations/aa/skeeps1.jpg",
+      "img/locations/aa/skeeps1.JPG",
       "img/locations/aa/skeeps2.jpg",
       "img/locations/aa/skeeps3.jpg",
       "img/locations/aa/skeeps4.jpg",
-      "img/locations/aa/skeeps5.jpg"
+      "img/locations/aa/skeeps5.JPG"
     ]
   },
 
@@ -267,7 +267,7 @@ const annArborLocations = {
     photos: [
       "img/locations/aa/docks1.jpg",
       "img/locations/aa/docks2.jpg",
-      "img/locations/aa/docks3.jpeg"
+      "img/locations/aa/docks3.JPEG"
     ]
   },
 
@@ -285,9 +285,9 @@ const annArborLocations = {
     photos: [
       "img/locations/aa/north1.jpg",
       "img/locations/aa/north2.jpg",
-      "img/locations/aa/north3.jpg",
-      "img/locations/aa/north4.jpg",
-      "img/locations/aa/north5.jpg",
+      "img/locations/aa/north3.JPG",
+      "img/locations/aa/north4.JPG",
+      "img/locations/aa/north5.JPG",
       "img/locations/aa/north6.jpg"
     ]
   },
@@ -305,7 +305,7 @@ const annArborLocations = {
 
     photos: [
       "img/locations/aa/tacobell1.jpg",
-      "img/locations/aa/tacobell2.jpg"
+      "img/locations/aa/tacobell2.JPG"
     ]
   }
 
