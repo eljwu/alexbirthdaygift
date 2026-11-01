@@ -210,36 +210,6 @@ h1 {
   padding: 18px;
 }
 
-
-/* .profile-photo {
-  aspect-ratio: 4 / 5;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  background:
-    linear-gradient(
-      145deg,
-      #28394e,
-      #182536
-    );
-
-  color:
-    rgba(255,255,255,.25);
-
-  font-family:
-    "Rajdhani",
-    sans-serif;
-
-  font-size: 24px;
-
-  font-weight: 700;
-
-  text-transform:
-    uppercase;
-} */
 /* PROFILE PHOTO CONTAINER */
 
 .profile-photo {
